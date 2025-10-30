@@ -4,7 +4,7 @@ let container = document.getElementById("articles");
 fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
   .then(response => response.json())
   .then(posts => {
-    let ul = document.createElement('ul');
+    let ul = document.createElement('ol');
 
     posts.forEach(post => {
       let li = document.createElement('li');
@@ -18,3 +18,5 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
     container.innerText = "Erreur lors de la récupération des données.";
     console.error(error);
   });
+
+  
