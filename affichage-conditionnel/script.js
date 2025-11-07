@@ -20,3 +20,28 @@ if (produitsFiltres.length === 0) {
     liste.appendChild(li);
   });
 }
+let ligne=document.getElementById("ligne");
+
+
+let products= [
+  { nom: "PC ", prix: 900 },
+  { nom: "Sou", prix: 25 },
+  { nom: "Cla", prix: 40 },
+  { nom: "Éc", prix: 150 }
+];
+
+let lista=document.getElementById("produits");
+ligne.innerHTML="<h1> nouvelle liste pour les produit le plus dun 100$</h1> ";
+lista.appendChild(ligne);
+let productsfilters=products.filter(p=>p.prix <1000);
+
+if (products.length>0) {
+
+   productsfilters.forEach(p=>{
+    let li=document.createElement("li");
+    li.textContent=`${p.nom}---${p.prix} $`;
+    lista.appendChild(li);
+  })
+}else{
+  lista.innerHTML="<li> acun prpduit trouver </li>"
+}
