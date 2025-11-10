@@ -1,18 +1,18 @@
 
 let container = document.getElementById("articles");
 
-fetch('https://jsonplaceholder.typicode.com/posts?_limit=9')
+fetch('https://jsonplaceholder.typicode.com/posts?_limit=2')
   .then(response => response.json())
   .then(posts => {
-    let ul = document.createElement('ul');
+    let section = document.createElement('section');
 
     posts.forEach(post => {
-      let li = document.createElement('li');
-      li.textContent = post.id;
-      ul.appendChild(li);
+      let article = document.createElement('article');
+      article.textContent =`id====${post.id}----------------------------title====${post.title}------------------------------------------body====${post.body}`;
+      section.appendChild(article);
     });
 
-    container.appendChild(ul);
+    container.appendChild(section);
   })
   .catch(error => {
     container.innerText = "Erreur lors de la récupération des données.";
@@ -85,4 +85,4 @@ function afficherUsers(users) {
 // to understand AJAX , Fetch , promes 
 // Asynchronous Vs Synchrounous programing
 // Synchrounous = must be the laste operation gomplitly to start the Synchrounous function operations
-//  Asynchronous = operations start inparallel , toghether 
+//  Asynchronous = operations start inparallel ,
