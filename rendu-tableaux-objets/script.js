@@ -16,3 +16,6 @@ produits.forEach(p => {
   `;
   catalogue.appendChild(carte);
 });
+
+
+
