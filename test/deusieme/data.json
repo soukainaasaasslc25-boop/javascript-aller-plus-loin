@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Fès",
+    "region": "imperiales",
+    "description": "Fès, capitale spirituelle du Maroc, célèbre pour sa médina et l'université Al Quaraouiyine.",
+    "images": ["images/fes1.jpg", "images/fes2.jpg", "images/fes3.jpg"],
+    "landmarks": "Médina de Fès, Tanneries, Université Al Quaraouiyine",
+    "history": "Fondée au VIIIe siècle, Fès est l'une des plus anciennes villes impériales.",
+    "popularity": 95,
+    "map": "https://maps.google.com/?q=Fès",
+    "wiki": "https://fr.wikipedia.org/wiki/Fès"
+  },
+  {
+    "id": 2,
+    "name": "Rabat",
+    "region": "imperiales",
+    "description": "Capitale du Maroc, mélange d'histoire et de modernité.",
+    "images": ["images/rabat/borg.jpg", "images/rabat/mosquer.jpg", "images/rabat/hassan2.jpg"],
+    "landmarks": "Tour Hassan, Kasbah des Oudayas, Mausolée Mohammed V",
+    "history": "Ville impériale et capitale administrative du Maroc.",
+    "popularity": 88,
+    "map": "https://maps.google.com/?q=Rabat",
+    "wiki": "https://fr.wikipedia.org/wiki/Rabat"
+  },
+  {
+    "id": 3,
+    "name": "Marrakech",
+    "region": "imperiales",
+    "description": "La ville rouge, connue pour Jemaa el-Fna et ses souks animés.",
+    "images": ["images/marrakech1.jpg", "images/marrakech2.jpg", "images/marrakech3.jpg"],
+    "landmarks": "Place Jemaa el-Fna, Jardin Majorelle, Palais Bahia",
+    "history": "Fondée au XIe siècle, capitale des Almoravides.",
+    "popularity": 98,
+    "map": "https://maps.google.com/?q=Marrakech",
+    "wiki": "https://fr.wikipedia.org/wiki/Marrakech"
+  },
+  {
+    "id": 4,
+    "name": "Chefchaouen",
+    "region": "medinas",
+    "description": "La perle bleue du Rif, célèbre pour ses ruelles peintes en bleu.",
+    "images": ["images/chefchaouen1.jpg", "images/chefchaouen2.jpg", "images/chefchaouen3.jpg"],
+    "landmarks": "Médina bleue, Kasbah, Ras Elma",
+    "history": "Fondée au XVe siècle, refuge historique et ville de montagne.",
+    "popularity": 92,
+    "map": "https://maps.google.com/?q=Chefchaouen",
+    "wiki": "https://fr.wikipedia.org/wiki/Chefchaouen"
+  },
+  {
+    "id": 5,
+    "name": "Tanger",
+    "region": "montagnes",
+    "description": "Ville portuaire au carrefour de l'Europe et de l'Afrique.",
+    "images": ["images/tanger1.jpg", "images/tanger2.jpg", "images/tanger3.jpg"],
+    "landmarks": "Cap Spartel, Kasbah, Médina",
+    "history": "Ville stratégique influencée par de nombreuses civilisations.",
+    "popularity": 90,
+    "map": "https://maps.google.com/?q=Tanger",
+    "wiki": "https://fr.wikipedia.org/wiki/Tanger"
+  },
+  {
+    "id": 6,
+    "name": "Agadir",
+    "region": "plages",
+    "description": "Station balnéaire moderne, connue pour ses plages et son climat doux.",
+    "images": ["images/agadir1.jpg", "images/agadir2.jpg", "images/agadir3.jpg"],
+    "landmarks": "Plage d'Agadir, Kasbah Oufella, Marina",
+    "history": "Reconstruite après le tremblement de terre de 1960.",
+    "popularity": 85,
+    "map": "https://maps.google.com/?q=Agadir",
+    "wiki": "https://fr.wikipedia.org/wiki/Agadir"
+  },
+  {
+    "id": 7,
+    "name": "Ouarzazate",
+    "region": "desert",
+    "description": "Porte du désert, célèbre pour ses kasbahs et ses studios de cinéma.",
+    "images": ["images/ouarzazate1.jpg", "images/ouarzazate2.jpg", "images/ouarzazate3.jpg"],
+    "landmarks": "Kasbah Aït Ben Haddou, Studios Atlas, Oasis de Fint",
+    "history": "Ville stratégique sur la route des caravanes transsahariennes.",
+    "popularity": 80,
+    "map": "https://maps.google.com/?q=Ouarzazate",
+    "wiki": "https://fr.wikipedia.org/wiki/Ouarzazate"
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villes Touristiques du Maroc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Villes Touristiques du Maroc</h1>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Rechercher une ville...">
+      <select id="regionSelect">
+        <option value="all">Toutes les régions</option>
+        <option value="north">Nord</option>
+        <option value="center">Centre</option>
+        <option value="south">Sud</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="citiesContainer" class="cities-container"></div>
+  </main>
+
+  <!-- Modal pour détails -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalImages" class="modal-images"></div>
+      <p id="modalDescription"></p>
+      <p><strong>Landmarks:</strong> <span id="modalLandmarks"></span></p>
+      <p><strong>History:</strong> <span id="modalHistory"></span></p>
+      <p><strong>Popularity:</strong> <span id="modalPopularity"></span>%</p>
+      <a id="modalMore" href="#" target="_blank">En savoir plus</a>
+    </div>
+  </div>
+
+  <script src="script.js">
+    
+
+  </script>
+</body>
+</html>

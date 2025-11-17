@@ -1,0 +1,421 @@
+/* ==================================================
+   STYLE.CSS – Version PROPRE & FACILE À COMPRENDRE
+   Pour le site "Dima Maroc" – Luxe & Moderne
+   ================================================== */
+
+/* 1. COULEURS ET EFFETS RÉUTILISABLES */
+:root {
+  --rouge-principal: #c07c07;          /* Rouge marocain intense */
+  --rouge-fonce:     #991529;          /* Au hover des boutons */
+  --or:              #f59e0b;          /* Doré du Sahara */
+  --verre:           rgba(255,255,255,0.13);   /* Effet verre fumé */
+  --bordure-verre:   rgba(255,255,255,0.25);
+  --fond-noir-degrade: linear-gradient(to bottom, 
+                         rgba(0,0,0,0.15), 
+                         rgba(0,0,0,0.82));
+}
+
+/* 2. RESET DE BASE (tout à zéro) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. FOND GÉNÉRAL DU SITE */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #000 url('agadir/téléchargement\ \(6\).jpg') 
+              center/cover fixed no-repeat;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Dégradé noir par-dessus la photo (effet sombre élégant) */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--fond-noir-degrade);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ==================================================
+   4. HEADER – Titre + Recherche + Catégories
+   ================================================== */
+header {
+  position: relative;
+  z-index: 10;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+/* Grand titre doré */
+header h1 {
+  font-size: 54px;
+  font-weight: 900;
+  color: var(--or);
+  margin-bottom: 20px;
+  text-shadow: 0 6px 30px rgba(0,0,0,0.7);
+}
+
+/* Barre de recherche – très belle */
+#btn-Search {
+  padding: 20px 32px;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 60px;
+  border: 2.5px solid var(--bordure-verre);
+  background: var(--verre);
+  backdrop-filter: blur(24px);
+  color: white;
+  font-size: 18px;
+  outline: none;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  margin: 15px 0;
+  transition: all 0.3s ease;
+}
+#btn-Search::placeholder { color: rgba(255,255,255,0.75); }
+#btn-Search:focus {
+  border-color: var(--or);
+  box-shadow: 0 20px 50px rgba(245,158,11,0.35);
+}
+
+/* Menu déroulant des catégories – stylé comme un bouton */
+#select-Region {
+  margin-top: 25px;
+  padding: 18px 32px;
+  width: 450px;
+  max-width: 85%;
+  border-radius: 60px;
+  border: 2.5px solid var(--bordure-verre);
+  background: var(--verre);
+  backdrop-filter: blur(24px);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none; /* enlève la flèche par défaut */
+  
+  /* Flèche personnalisée */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+#select-Region:hover,
+#select-Region:focus {
+  border-color: var(--or);
+  box-shadow: 0 20px 50px rgba(245,158,11,0.35);
+}
+#select-Region option {
+  background: #f1b57cc0;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 10px;
+  
+}
+
+/* ==================================================
+   5. CARTES DES VILLES
+   ================================================== */
+main {
+  position: relative;
+  z-index: 10;
+  padding: 60px 40px 120px;
+  margin-top: -100px; /* chevauche légèrement le header */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Style de chaque carte */
+.card {
+  background: var(--verre);
+  backdrop-filter: blur(24px);
+  border: 1.5px solid var(--bordure-verre);
+  border-radius: 32px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+.card:hover {
+  transform: translateY(-18px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.65);
+}
+
+/* Image principale de la ville */
+.card__banner {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contenu de la carte */
+.card__content { padding: 24px; }
+.card__title h3 { font-size: 26px; font-weight: 800; color: white; margin-bottom: 8px; }
+
+/* Badge de catégorie (or) */
+.badge {
+  background: var(--or);
+  color: black;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Mini galerie (2 photos) */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+.gallery img {
+  height: 88px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.18);
+}
+
+/* Description courte */
+.card__desc {
+  font-size: 15px;
+  line-height: 1.58;
+  opacity: 0.94;
+  margin-bottom: 20px;
+}
+
+/* Bouton "Voir plus" */
+.card__btn {
+  background: var(--rouge-principal);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+.card__btn:hover {
+  background: var(--rouge-fonce);
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+  backdrop-filter: blur(14px);
+}
+.modal.show { display: flex; }
+
+.modal__content {
+  background: rgba(12, 12, 12, 0.541);
+  backdrop-filter: blur(30px);
+  border: 1.5px solid var(--bordure-verre);
+  border-radius: 36px;
+  max-width: 940px;
+  width: 95%;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.315);
+}
+
+/* En-tête de la modal (rouge) */
+.modal__header {
+  background: var(--rouge-principal);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 36px 36px 0 0;
+}
+.modal__header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+}
+
+/* Bouton fermer */
+.modal__close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.modal__close:hover { background: rgba(255,255,255,0.2); }
+
+/* Corps de la modal */
+.modal__body { padding: 36px; }
+
+.modal__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.modal__images img {
+  width: 100%;
+  height: 180px;
+  object-fit:
+  cover;
+  border-radius: 24px;
+  border: 3px solid var(--bordure-verre);
+}
+
+/* Infos détaillées */
+.modal__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+.meta__item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--bordure-verre);
+  border-radius: 22px;
+  padding: 22px;
+}
+.meta__item strong {
+  color: var(--or);
+  font-size: 18px;
+}
+
+/* ==================================================
+   ÉVÉNEMENTS LOCAUX – Style marocain moderne
+   ================================================== */
+.events {
+  margin-top: 40px;
+}
+
+.events h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--or);
+  text-align: center;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  border-bottom: 2px solid var(--rouge-principal);
+  padding-bottom: 8px;
+}
+
+.events ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.events li {
+  background: var(--verre);
+  backdrop-filter: blur(18px);
+  border: 2px solid var(--bordure-verre);
+  border-radius: 28px 28px 60px 60px; /* effet arche inspiré des portes marocaines */
+  padding: 20px 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform .3s ease, box-shadow .3s ease;
+  position: relative;
+}
+
+.events li:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.events li strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--or);
+  margin-bottom: 6px;
+}
+
+.events li span {
+  font-size: 15px;
+  color: #f1f1f1;
+  opacity: 0.9;
+}
+
+/* Motif décoratif subtil (mosaïque) */
+.events li::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, var(--rouge-principal) 20%, transparent 70%);
+  opacity: 0.15;
+  transform: rotate(45deg);
+}
+/* ==================================================
+   VIDÉO IMMERSIVE – Accueil
+   ================================================== */
+.intro-video {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+  border-radius: 36px;
+  margin: 40px auto;
+  max-width: 1400px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  border: 2px solid var(--bordure-verre);
+}
+
+.intro-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(1.2);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--or);
+  z-index: 2;
+}
+
+.video-overlay h2 {
+  font-size: 64px;
+  font-weight: 900;
+  text-shadow: 0 8px 40px rgba(0,0,0,0.8);
+  margin-bottom: 20px;
+}
+
+.video-overlay p {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}

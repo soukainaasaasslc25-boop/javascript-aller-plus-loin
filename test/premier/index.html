@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Découvrir les villes du Maroc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Vidéo immersive -->
+<section class="intro-video">
+  <video autoplay muted loop>
+    <source src="agadir/14691313_3840_2160_60fps.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div class="video-overlay">
+    <h2>Bienvenue au Maroc </h2>
+    <p>Terre de lumière, royaume des couleurs</p>
+  </div>
+</section>
+
+  <!-- Header -->
+  <header>
+    <h1>Dima Maroc, du bleu de Chefchaouen au doré du Sahara</h1>
+    <input type="text" id="btn-Search" placeholder="Quel coin du Maroc t’appelle ?">
+    <select name="region" id="select-Region">
+      <option value="all">Toutes les catégories</option>
+      <option value="imperiales">Villes impériales</option>
+      <option value="medinas">Médinas & riads</option>
+      <option value="montagnes">Montagnes & randonnées</option>
+      <option value="plages">Plages & surf</option>
+      <option value="desert">Désert & dunes</option>
+    </select>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section>
+      <!-- Les cartes seront injectées ici par script.js -->
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js">
+  </script>
+</body>
+</html>
